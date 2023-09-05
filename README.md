@@ -1,6 +1,6 @@
 # Code SpringBoot pour communiquer avec LogicalDoc
 
-Cette API contient le code nécessaire pour faire les opérations ( **GET**, **POST**, **PUT** et **DELETE**) nécessaires pour communiquer avec L'api de LogicalDoc
+Ce programme contient le code nécessaire pour faire les opérations ( **GET**, **POST**, **PUT** et **DELETE**) nécessaires pour communiquer avec L'api de LogicalDoc
 
 ## Guide de démarrage
 
