@@ -16,9 +16,11 @@ https://www.logicaldoc.fr/fr/download-logicaldoc-community
 ```
 Allez au titre *Installer LogicalDOC* et suivez le guide de téléchargement et d'installation
 
-## Deployment
+## Deploiement
 
-//////////////////Add additional notes about how to deploy this on a live system
+* Lancez l'application LogicalDoc
+* Lancez l'application SpringBoot
+* Modifiez les exemples commentés dans le fichier **OnlineCourse1Application** entre les lignes **17** et **20** ou appelez une des méhodes de l'interface LogicalDocRepository pour communiquer avec LogicalDoc.
 
 ## Construit avec
 
@@ -28,4 +30,3 @@ Allez au titre *Installer LogicalDOC* et suivez le guide de téléchargement et 
 
 * **Kamgang William**  - [Compte GitHub](https://github.com/jevlgx)
 * **Ndzana Leo**
-  

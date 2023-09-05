@@ -1,33 +1,22 @@
 package com.stage.api;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.util.FileCopyUtils;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
+import com.stage.api.repository.logicalDocRepository.LogicalDocRepository;
 
-import com.stage.api.repository.SendGet;
 
 @SpringBootApplication
 public class OnlineCourse1Application {
-
+	public static String username = "admin";//remplacer par le nom d'utilisateur
+	public static String password = "admin";//remplacer par le mot de passe de cet utilisateur
 	public static void main(String[] args) throws IOException{
 		SpringApplication.run(OnlineCourse1Application.class, args);
-		//byte[] documentByte = SendGet.sendGet("http://localhost:8080/services/rest/document/getContent?docId=102", "admin", "admin");
-        //System.out.println("Le fichier MP4 a été créé avec succès.");
-        //convertBytesToMP4(documentByte);
-	}
-	
-	private static String convertBytesToMP4(byte[] documentByte) throws IOException{
-		File mp4File = new File("uploads/output.mp4");
-		FileOutputStream outputStream = new FileOutputStream(mp4File);
-		FileCopyUtils.copy(documentByte,outputStream);
-		outputStream.close();
-		return "yo";
+		LogicalDocRepository.getRequest("http://localhost:8080/services/rest/auth/login?u=admin&pw=admin", username, password);
+		//LogicalDocRepository.postRequest("http://localhost:8080/services/rest/folder/create", username, password, "application/json", "application/json", "{  \"name\": \"dossierTEst\",  \"parentId\": 4}");
+		//LogicalDocRepository.deleteRequest("http://localhost:8080/services/rest/folder/delete?folderId=112", username, password, "application/json");
+		//LogicalDocRepository.putRequest("http://localhost:8080/services/rest/folder/rename?folderId=100&name=000", username, password, "application/json");
 	}
 }
